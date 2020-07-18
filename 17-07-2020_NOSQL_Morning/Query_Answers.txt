@@ -1,0 +1,9 @@
+Ans-1. select id, average_clean_rating[0].c from (select meta().id as id, (select avg(t1.ratings.Cleanliness) as c from t.reviews as t1) as average_clean_rating  from `travel-sample` as t where type="hotel") as S where average_clean_rating[0].c>=4;
+
+Ans-2. SELECT t.country, t.alt as max_alt, t.airportname
+  		FROM (SELECT country, geo.alt as alt, airportname,
+               ROW_NUMBER() OVER (PARTITION BY country ORDER BY geo.alt DESC) rank
+          	FROM `travel-sample`) as t
+ 	WHERE t.rank = 1;
+
+Ans-3. select meta().id, sourceairport, destinationairport from `travel-sample` where type='route' and airline="AF" and sourceairport="MRS";
