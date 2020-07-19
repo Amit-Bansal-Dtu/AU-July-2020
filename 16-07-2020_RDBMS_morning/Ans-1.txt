@@ -1,0 +1,28 @@
+Functional Dependencies:
+
+1) CustID--> CustName, AccountManager, AccountManageRoom, ContactName1, ContactName2
+2) AccountManager-->AccountManagerRoom
+
+Candidate keys:
+(CustID)+ --> CustID, CustName, AccountManager, AccountManageRoom, ContactName1, ContactName2
+so, CustID is a candidate key
+
+(Is there any Partial Dependency?)Checking for 2NF:
+There is no partial Dependency
+So, the relation is already in 2NF.
+
+(Is there any transitive Dependency?)Checking for 3NF:
+
+There is a transitive dependency as CustID-->AccountManager, AccountManager-->AccountManagerRoom
+
+Customer(CustID, CustName, AccountManager, Contact1, Contact2)
+Manager(AccountManager, AccountManagerRoom)
+
+Checking for BCNF:
+CustID is a candidate key in Customer relation which is the only left side attribute of FD there.
+AccountManager is a candidate key in Manager relation which is the only left side attribute of FD there.
+
+So, 
+Customer(CustID, CustName, AccountManager, Contact1, Contact2)
+Manager(AccountManager, AccountManagerRoom)
+These relations are in BCNF.

@@ -1,0 +1,48 @@
+Functional dependencies:
+
+1) StudentID --> StudentName, StudentAddress, TutorId, TutorName
+2) ModuleID --> ModuleName
+3) TutorID --> TutorName
+
+Candidate key(s):
+
+(StudentID, ModuleID)+ = StudentID, StudentName, StudentAddress, TutorID,
+			 TutorName, ModuleID, ModuleName
+
+So, clearly the combination of (StudentID, ModuleID) is a candidate key as
+it finds all attributes in the table student.
+
+(Is there any partial dependency?)Checking for 2NF:
+
+1) StudentID alone identifies StudentID, StudentName, StudentAddress, TutorID, TutorName.
+2) ModuleID identifies ModuleID, ModuleName attributes.
+
+Above two are the partial dependencies.
+
+So, we need to decompose Student further on individual partial dependencies.
+
+Student(StudentID, StudentName, StudentAddress, TutorID, TutorName)
+Module(ModuleID, ModuleName)
+
+To establish a connection between Student and Module, we need to create a new relation(many-to-many relationship)
+as follows:
+Stu_Module(StudentID, ModuleID)
+
+All above tables are now in 2NF.
+
+(Is there any transitive dependency?)Checking for 3NF:
+
+New Student relation has a functional dependency TutorID-->TutorName which is transitive.[as, StudentID-->TutorID and TutorID-->TutorName]
+
+Student relation is not in 3NF. To convert it to 3NF, decompose the relation using the violating functional dependency. In this process, we get the following relations;
+Stu (StudentID, StudentName, StudentAddress, TutorID) and
+Tutor (TutorID, TutorName)
+Both of these relations are in 3NF.
+
+No transitive dependencies are found in the other two relations Module and Stu_Module. Hence they are also in 3NF.
+
+Following are the final relation schemas in 3NF;
+Stu (StudentID, StudentName, StudentAddress, TutorID)  
+Tutor (TutorID, TutorName)
+Module (ModuleID, ModuleName)
+Stu_Module (StudentID, ModuleID)
