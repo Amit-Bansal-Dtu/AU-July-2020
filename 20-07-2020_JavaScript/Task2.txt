@@ -1,0 +1,19 @@
+var add = (function(){
+  var counter = 0;
+  return function(){return counter+1;}
+})()
+
+console.log(add());
+console.log(add());
+console.log(add());
+
+Output:
+1
+2
+3
+
+Explanation: 
+Due to hoisting the variable counter becomes global, but to the outer function it still
+is a local variable, thus it is initialized everytime to 0, but for the inner function 
+the counter variable is the global one, which is having its value incremented each time 
+add function is called, so this add function is simply working like a counter.

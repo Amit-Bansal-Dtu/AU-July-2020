@@ -1,0 +1,8 @@
+Difference between \n and \r:
+
+\n takes us to the beginning of the next line.
+
+whereas, \r takes us to the beginning of the current line, without moving to the next line.
+
+In "old" printers, \r takes the print head back to the start of the line, 
+whereas \n advanced the paper by one line.
