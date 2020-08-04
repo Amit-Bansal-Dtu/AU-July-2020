@@ -98,9 +98,7 @@ public class BQ{
 			new Thread(p).start();
 
 	       	Consumer c[] = new Consumer[n];
-			for(int i=0; i<n; i++) {
-				c[i] = new Consumer(q);
-			}
+
         	for(int i=0; i<n; i++) {
         		c[i] = new Consumer(q);
 				new Thread(c[i]).start();
