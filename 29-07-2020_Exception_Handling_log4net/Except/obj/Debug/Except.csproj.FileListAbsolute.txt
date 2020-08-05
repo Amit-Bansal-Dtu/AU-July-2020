@@ -1,0 +1,9 @@
+C:\Users\Amit Bansal\source\repos\Except\Except\bin\Debug\Except.exe.config
+C:\Users\Amit Bansal\source\repos\Except\Except\bin\Debug\Except.exe
+C:\Users\Amit Bansal\source\repos\Except\Except\bin\Debug\Except.pdb
+C:\Users\Amit Bansal\source\repos\Except\Except\bin\Debug\log4net.dll
+C:\Users\Amit Bansal\source\repos\Except\Except\bin\Debug\log4net.xml
+C:\Users\Amit Bansal\source\repos\Except\Except\obj\Debug\Except.csprojAssemblyReference.cache
+C:\Users\Amit Bansal\source\repos\Except\Except\obj\Debug\Except.csproj.CopyComplete
+C:\Users\Amit Bansal\source\repos\Except\Except\obj\Debug\Except.exe
+C:\Users\Amit Bansal\source\repos\Except\Except\obj\Debug\Except.pdb

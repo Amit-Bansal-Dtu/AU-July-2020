@@ -1,0 +1,9 @@
+﻿12:41:45,758 [Except.Program] INFO - Read Successful
+12:41:45,825 [Except.Program] INFO - Program Execution Ended
+
+
+12:43:22,925 [Except.Program] INFO - Read Successful
+12:43:23,104 [Except.Program] INFO - Program Execution Ended
+
+
+12:43:28,933 [Except.Program] ERROR -    at Except.Program.Main(String[] args) in C:\Users\Amit Bansal\source\repos\Except\Except\Program.cs:line 83
