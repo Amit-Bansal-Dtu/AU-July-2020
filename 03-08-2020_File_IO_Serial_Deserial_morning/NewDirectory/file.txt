@@ -1,0 +1,4 @@
+This is line number 1
+Be careful line number 2 ahead
+This is line 3 underway
+Line 4 is just fabulous
